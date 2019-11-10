@@ -16,5 +16,23 @@ namespace @is
         {
             InitializeComponent();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            testdbEntities ts = new testdbEntities();
+            //linq
+            user user = ts.users.FirstOrDefault();
+            textBox1.Text = user.name;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
